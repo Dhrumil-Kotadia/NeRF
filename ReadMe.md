@@ -65,4 +65,4 @@ Please check the report for more details.
 
 ## Author
 - **Dhrumil Kotadia**  
-  Robotics Engineering Department, Worcester Polytechnic Institute  
+  Robotics Engineering Department, Worcester Polytechnic Institute
