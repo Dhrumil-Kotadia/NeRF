@@ -1,12 +1,11 @@
 # NeRF
 
 ### Introduction
-In this work, we provide a comprehensive analysis of our implementation of the NeRF network. NeRF, short for Neural Radiance Fields, embodies a sophisticated framework encapsulated within a fully connected network architecture. This neural network operates seamlessly with its input characterized by a unified continuous 5D coordinate system encompassing spatial positions (x, y, z) and viewing directions (θ, Φ), providing volume density and RGB pixel values corresponding to the viewing direction as outputs. We use the lego and ship datasets from the official dataset obtained from the original author. NeRF uses classical volume rendering techniques, considering each point as a ray starting from the camera center and passing through the pixel to the world. The premise of the ![paper](https://arxiv.org/abs/2003.08934) involves generating images of a scene from new viewpoints, a problem falling under novel image synthesis.
+In this work, we provide a comprehensive analysis of our implementation of the NeRF network. NeRF, short for Neural Radiance Fields, embodies a sophisticated framework encapsulated within a fully connected network architecture. This neural network operates seamlessly with its input characterized by a unified continuous 5D coordinate system encompassing spatial positions (x, y, z) and viewing directions (θ, Φ), providing volume density and RGB pixel values corresponding to the viewing direction as outputs. We use the lego and ship datasets from the official dataset obtained from the original author. NeRF uses classical volume rendering techniques, considering each point as a ray starting from the camera center and passing through the pixel to the world. The premise of the [paper](https://arxiv.org/abs/2003.08934) involves generating images of a scene from new viewpoints, a problem falling under novel image synthesis.
 
 ### Background and Dataset
 
-Download the ![dataset](https://drive.google.com/drive/folders/1JDdLGDruGNXWnM1eqY1FNL9PlStjaKWi)
-It contains three folders containing images: train, val, and test, and three files containing the orientation and position of the camera: `transforms_train.json`, `transforms_val.json`, and `transforms_test.json`. Each frame is a dictionary containing two keys, `transform_matrix` and `file_path`. The `file_path` is the path to the image (frame) under consideration, and the `transform_matrix` is the camera-to-world matrix for that image.
+Download the [dataset](https://drive.google.com/drive/folders/1JDdLGDruGNXWnM1eqY1FNL9PlStjaKWi). It contains three folders containing images: train, val, and test, and three files containing the orientation and position of the camera: `transforms_train.json`, `transforms_val.json`, and `transforms_test.json`. Each frame is a dictionary containing two keys, `transform_matrix` and `file_path`. The `file_path` is the path to the image (frame) under consideration, and the `transform_matrix` is the camera-to-world matrix for that image.
 
 ### Method
 
@@ -31,7 +30,12 @@ We have used the network mentioned in the official NeRF paper but we have only u
 
 The outputs of the Test set for the Lego dataset can be seen in figure 4. The rendered images are compared with the ground truth and it is evident that the network does an adequate job of reproducing the novel views.
 
-![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/GT/r_21.png) ![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/Rendered/Rendered_Image_21.png)  
+<figure>
+ <img src="Images/Lego/GT/r_21.png" width="200">
+ <img src="Images/Lego/Rendered/Rendered_Image_21.png" width="200">
+ <figcaption>Ground Truth (Left) and Rendered Image</figcaption>
+</figure>
+![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/GT/r_21.png | width = 200) ![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/Rendered/Rendered_Image_21.png | width = 200)  
 ![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/GT/r_62.png) ![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/Rendered/Rendered_Image_62.png)  
 ![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/GT/r_95.png) ![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/Rendered/Rendered_Image_95.png)
 
