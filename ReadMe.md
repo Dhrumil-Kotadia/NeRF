@@ -3,7 +3,7 @@
 ## Introduction
 This work is our implementation and analysis of Neural Radiance Fields(NeRF). This neural network is a fully connected network with input characterized by spatial positions (x, y, z) and viewing directions (θ, Φ), providing volume density and RGB pixel values corresponding to the viewing direction as outputs. NeRF uses classical volume rendering techniques, considering each point as a ray starting from the camera center and passing through each pixel to the world. The premise of the [paper](https://arxiv.org/abs/2003.08934) involves generating images of a scene from new viewpoints, a problem falling under novel image synthesis.
 
-<p float="center">
+<p align="center">
  <img src="Images/Lego/Lego.gif" width="400"/>
 </p>
 
