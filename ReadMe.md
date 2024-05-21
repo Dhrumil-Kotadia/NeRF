@@ -31,38 +31,69 @@ We have used the network mentioned in the official NeRF paper but we have only u
 The outputs of the Test set for the Lego dataset can be seen in figure 4. The rendered images are compared with the ground truth and it is evident that the network does an adequate job of reproducing the novel views.
 
 <p float="left">
- <img src="Images/Lego/GT/r_21.png" width="200"/>
- <img src="Images/Lego/Rendered/Rendered_Image_21.png" width="200"/>
+ <img src="Images/Lego/GT/r_21.png" width="400"/>
+ <img src="Images/Lego/Rendered/Rendered_Image_21.png" width="400"/>
  <figcaption>Ground Truth (Left) and Rendered Image</figcaption>
 </p>
-![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/GT/r_21.png | width = 200) ![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/Rendered/Rendered_Image_21.png | width = 200)  
-![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/GT/r_62.png) ![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/Rendered/Rendered_Image_62.png)  
-![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/GT/r_95.png) ![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/Rendered/Rendered_Image_95.png)
+<p float="left">
+ <img src="Images/Lego/GT/r_62.png" width="400"/>
+ <img src="Images/Lego/Rendered/Rendered_Image_62.png" width="400"/>
+ <figcaption>Ground Truth (Left) and Rendered Image</figcaption>
+</p>
+<p float="left">
+ <img src="Images/Lego/GT/r_95.png" width="400"/>
+ <img src="Images/Lego/Rendered/Rendered_Image_95.png" width="400"/>
+ <figcaption>Ground Truth (Left) and Rendered Image</figcaption>
+</p>
 
 However, this is done using positional encoding. Without positional encoding, the outputs are less than desirable as can be seen in figure 5.
 
-![Rendered images without positional encoding (left) and with positional encoding (Right)](Images/Lego/PE/Screenshot%20from%202024-03-11%2017-30-15.png) ![Rendered images without positional encoding (left) and with positional encoding (Right)](Images/Lego/PE/Screenshot%20from%202024-03-11%2017-31-11.png)
+<p float="left">
+ <img src="Images/Lego/PE/Screenshot%20from%202024-03-11%2017-30-15.png" width="400"/>
+ <img src="Images/Lego/PE/Screenshot%20from%202024-03-11%2017-31-11.png" width="400"/>
+ <figcaption>Rendered images without positional encoding (left) and with positional encoding (Right)</figcaption>
+</p>
+
 
 The output images for the ship dataset are shown in figure 6.
 
-![Ground Truth (Left) and Rendered Image (Right)](Images/Ship/GT/r_12.png) ![Ground Truth (Left) and Rendered Image (Right)](Images/Ship/Rendered/Rendered_Image_12.png)  
-![Ground Truth (Left) and Rendered Image (Right)](Images/Ship/GT/r_143.png) ![Ground Truth (Left) and Rendered Image (Right)](Images/Ship/Rendered/Rendered_Image_143.png)  
-![Ground Truth (Left) and Rendered Image (Right)](Images/Ship/GT/r_163.png) ![Ground Truth (Left) and Rendered Image (Right)](Images/Ship/Rendered/Rendered_Image_163.png)
+<p float="left">
+ <img src="Images/Ship/GT/r_12.png" width="400"/>
+ <img src="Images/Ship/Rendered/Rendered_Image_12.png" width="400"/>
+ <figcaption>Ground Truth (Left) and Rendered Image</figcaption>
+</p>
+<p float="left">
+ <img src="Images/Ship/GT/r_143.png" width="400"/>
+ <img src="Images/Ship/Rendered/Rendered_Image_143.png" width="400"/>
+ <figcaption>Ground Truth (Left) and Rendered Image</figcaption>
+</p>
+<p float="left">
+ <img src="Images/Ship/GT/r_163.png" width="400"/>
+ <img src="Images/Ship/Rendered/Rendered_Image_163.png" width="400"/>
+ <figcaption>Ground Truth (Left) and Rendered Image</figcaption>
+</p>
 
 ### Observations
-An observation is that with the same pretrained model, when the test images are queried with different sample points per rays, the output changes drastically. This can be seen in figure 7.
+An observation is that with the same pretrained model, when the test images are queried with different sample points per rays, the output changes drastically. This can be seen in the following figure.
 
-![Rendered images with 32 sampling points (left) and 128 sampling points (right) per ray](Images/Lego/Rendered_Image_21.png) ![Rendered images with 32 sampling points (left) and 128 sampling points (right) per ray](Images/Lego/Rendered/Rendered_Image_21.png)
+<p float="left">
+ <img src="Images/Lego/Rendered_Image_21.png" width="400"/>
+ <img src="Images/Lego/Rendered/Rendered_Image_21.png" width="400"/>
+ <figcaption>Rendered images with 32 sampling points (left) and 128 sampling points (right) per ray</figcaption>
+</p>
 
-Another observation is that there are some rendered images which have artifacts that are undesirable. These can be seen in figure 8.
+Another observation is that there are some rendered images which have artifacts that are undesirable. These can be seen in the following figure.
 
-![Bad rendering of images with artifacts](Images/Ship/Bad/r_98.png) ![Bad rendering of images with artifacts](Images/Ship/Bad/Rendered_Image_98.png)
+<p float="left">
+ <img src="Images/Ship/Bad/r_98.png" width="400"/>
+ <img src="Images/Ship/Bad/Rendered_Image_98.png" width="400"/>
+ <figcaption>Bad rendering of images with artifacts</figcaption>
+</p>
 
 Overall, looking at the Lego and the Ship rendered outputs, it can be seen that the results are adequate but can be improved. There are 2 main improvements that can be done here:
 
 1. The image resolution is reduced to (200x200) from the original (800x800). This is done to reduce the training time but as a result of this, the output resolution is less so the image does not have the sharpness and clarity that is expected.
 2. The training can be done for more epochs to improve the output and to get rid of the artifacts that have been generated.
-
  
 
 ## Installation
