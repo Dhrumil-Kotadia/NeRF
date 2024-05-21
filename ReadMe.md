@@ -5,7 +5,7 @@ This work is our implementation and analysis of Neural Radiance Fields(NeRF). Th
 
 ## Dependencies
 
-To run the code, install all the following necessary packages.
+To run the code, install the following necessary packages.
 
 1. PyTorch
 2. PIL
@@ -20,7 +20,7 @@ Follow the steps to run the code:
 
 1. Set the Hyperparameters (Batch_Size, Learning_Rate, Step_Size, Epochs etc.) in Wrapper.py using command line arguments.
 2. Set the appropriate paths for Training data in the Wrapper.py and FetchData.py.
-3. Run the file Wrapper.py.
+3. Run the file Wrapper.py with appropriate arguments.
 4. For testing, provide the appropriate paths for trained model, Rendered Image file generation and Gif generation in Test.py.
 5. Run Test.py to generate the output.
 
@@ -42,7 +42,7 @@ We have used the network mentioned in the official NeRF paper but we have only u
 <p float="left">
  <img src="Images/Network.png" width="800"/>
 </p>
-<p align="center">NeRF Network</p>
+<p align="center">*NeRF Network*</p>
 
 - **Number of samples per ray:** 256
 - **Learning rate:** 0.0005
@@ -62,7 +62,7 @@ The outputs of the Test set for the Lego dataset can be seen in the following fi
  <img src="Images/Lego/GT/r_95.png" width="400"/>
  <img src="Images/Lego/Rendered/Rendered_Image_95.png" width="400"/>
 </p>
-<p align="center">Ground Truth (Left) and Rendered Image(Right)</p>
+<p align="center">*Ground Truth (Left) and Rendered Image(Right)*</p>
 
 The results shown above are obtained with implementation of positional encoding as mentioned in the original paper. To compare the effects of positional encoding, we trained the same model for the same number of epochs without positional encoding. The outputs obtained are less than desirable and the comparision can be seen in the following figure.
 
@@ -70,7 +70,7 @@ The results shown above are obtained with implementation of positional encoding 
  <img src="Images/Lego/PE/Screenshot%20from%202024-03-11%2017-30-15.png" width="400"/>
  <img src="Images/Lego/PE/Screenshot%20from%202024-03-11%2017-31-11.png" width="400"/>
 </p>
-<p align="center">Rendered images without positional encoding (left) and with positional encoding (Right)</p>
+<p align="center">*Rendered images without positional encoding (left) and with positional encoding (Right)*</p>
 
 
 
@@ -84,7 +84,7 @@ Similarly, the output images for the ship dataset are shown in the following fig
  <img src="Images/Ship/GT/r_163.png" width="400"/>
  <img src="Images/Ship/Rendered/Rendered_Image_163.png" width="400"/>
 </p>
-<p align="center">Ground Truth (Left) and Rendered Image(Right)</p>
+<p align="center">*Ground Truth (Left) and Rendered Image(Right)*</p>
 
 ## Observations
 It is observed that with the same pretrained model, when the test images are queried with different sample points per rays, the output changes drastically. This can be seen in the following figure.
@@ -93,7 +93,7 @@ It is observed that with the same pretrained model, when the test images are que
  <img src="Images/Lego/Rendered_Image_21.png" width="400"/>
  <img src="Images/Lego/Rendered/Rendered_Image_21.png" width="400"/>
 </p>
-<p align="center">Rendered images with 32 sampling points (left) and 128 sampling points (right) per ray</p>
+<p align="center">*Rendered images with 32 sampling points (left) and 128 sampling points (right) per ray*</p>
 
 Another observation is that there are some rendered images which have artifacts that are undesirable. These can be seen in the following figure.
 
@@ -101,7 +101,7 @@ Another observation is that there are some rendered images which have artifacts 
  <img src="Images/Ship/Bad/r_98.png" width="400"/>
  <img src="Images/Ship/Bad/Rendered_Image_98.png" width="400"/>
 </p>
-<p align="center">Bad rendering of images with artifacts</p>
+<p align="center">*Bad rendering of images with artifacts*</p>
 
 Overall, looking at the Lego and the Ship rendered outputs, it can be seen that the results are adequate but can be improved. There are 2 main improvements that can be done here:
 
