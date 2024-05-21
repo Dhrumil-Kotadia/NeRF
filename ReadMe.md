@@ -31,8 +31,7 @@ We have used the network mentioned in the official NeRF paper but we have only u
 The outputs of the Test set for the Lego dataset can be seen in figure 4. The rendered images are compared with the ground truth and it is evident that the network does an adequate job of reproducing the novel views.
 
 <figure>
- <img src="Images/Lego/GT/r_21.png" width="200">
- <img src="Images/Lego/Rendered/Rendered_Image_21.png" width="200">
+ <img src="Images/Lego/GT/r_21.png" width="200"><img src="Images/Lego/Rendered/Rendered_Image_21.png" width="200">
  <figcaption>Ground Truth (Left) and Rendered Image</figcaption>
 </figure>
 ![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/GT/r_21.png | width = 200) ![Ground Truth (Left) and Rendered Image (Right)](Images/Lego/Rendered/Rendered_Image_21.png | width = 200)  
