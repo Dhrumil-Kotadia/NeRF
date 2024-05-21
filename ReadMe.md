@@ -3,8 +3,8 @@
 ## Introduction
 This work is our implementation and analysis of Neural Radiance Fields(NeRF). This neural network is a fully connected network with input characterized by spatial positions (x, y, z) and viewing directions (θ, Φ), providing volume density and RGB pixel values corresponding to the viewing direction as outputs. NeRF uses classical volume rendering techniques, considering each point as a ray starting from the camera center and passing through each pixel to the world. The premise of the [paper](https://arxiv.org/abs/2003.08934) involves generating images of a scene from new viewpoints, a problem falling under novel image synthesis.
 
-<p float="left">
- <img src="Images/Lego/Lego.gif" width="800"/>
+<p float="center">
+ <img src="Images/Lego/Lego.gif" width="400"/>
 </p>
 
 ## Dependencies
@@ -38,7 +38,7 @@ The network implemented is the one mentioned in the official NeRF paper as shown
 <p float="left">
  <img src="Images/Network.png" width="800"/>
 </p>
-<p align="center"><em>NeRF Network<em></p>
+<p align="center"><em>NeRF Network</em></p>
 
 - **Image Resolution for Training:** 200x200
 - **Number of samples per ray:** 256
@@ -59,7 +59,7 @@ The rendered novel views are compared with the ground truth in the following fig
  <img src="Images/Lego/GT/r_95.png" width="400"/>
  <img src="Images/Lego/Rendered/Rendered_Image_95.png" width="400"/>
 </p>
-<p align="center"><em>Ground Truth (Left) and Rendered Image(Right)<em></p>
+<p align="center"><em>Ground Truth (Left) and Rendered Image(Right)</em></p>
 
 Please check the report for more details.
 
